@@ -1,0 +1,11 @@
+Options +FollowSymlinks
+RewriteEngine On
+
+# RewriteRule ^img/U_(.*)_(.*)_BLOC(.*)\.jpg$ /app/$2/$2.php?bloc=$3&eui=$1&%{TIME_MON}%{TIME_DAY}%{TIME_HOUR}%{TIME_MIN}%{TIME_SEC}  [L]
+# images/maillots/10875-7685E-1821701-8121487D_maillot.jpg
+
+RewriteRule ^images/maillots/dos-(.*)-(.*)-(.*)-(.*)_maillot.jpg$ https://ffr-subli.lablcs.com/clients/$2/Creations/$4/previewdos_medium.jpg [L]
+RewriteRule ^images/maillots/(.*)-(.*)-(.*)-(.*)_maillot.jpg$ https://ffr-subli.lablcs.com/clients/$2/Creations/$4/previewface_medium.jpg [L]
+RewriteRule ^images/logos/(.*)-(.*)-(.*)-(.*)_logo.png$ https://ffr-subli.lablcs.com/clients/$2/Creations/$4/FACE_Logo-club/IMG.png [L]
+
+
